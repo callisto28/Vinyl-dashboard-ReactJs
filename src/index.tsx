@@ -8,6 +8,8 @@ import {
   gql
 } from "@apollo/client";
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
+import  Nav  from './components/Nav';
 
 const client = new ApolloClient({
   uri: 'http://nestvinyl.herokuapp.com/graphq',
@@ -16,9 +18,11 @@ const client = new ApolloClient({
 
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+    <App />    
+   </ApolloProvider>
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
