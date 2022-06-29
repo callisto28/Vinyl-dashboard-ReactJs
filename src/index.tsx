@@ -5,25 +5,31 @@ import {
   InMemoryCache,
   ApolloProvider,
   useQuery,
-  gql
+  gql,
+  HttpLink
 } from "@apollo/client";
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import  Nav  from './components/Nav';
+
+
+const container = document.getElementById('root');
+const root = createRoot(container!)
+
 
 const client = new ApolloClient({
-  uri: 'http://nestvinyl.herokuapp.com/graphq',
-  cache: new InMemoryCache()
+  uri: 'http://nestvinyl.herokuapp.com/graphql',
+  cache: new InMemoryCache(),
 });
 
 
-ReactDOM.render(
+root.render(
   <BrowserRouter>
     <ApolloProvider client={client}>
-    <App />    
-   </ApolloProvider>
-    </BrowserRouter>,
-  document.getElementById('root')
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
+
 );
 
 
