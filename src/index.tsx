@@ -22,7 +22,7 @@ const root = createRoot(container!);
 
 
 const client = new ApolloClient({
-  uri: 'http://nestvinyl.herokuapp.com/graphql',
+  uri: 'https://nestvinyl.herokuapp.com/graphql',
   cache: new InMemoryCache(),
 });
 
