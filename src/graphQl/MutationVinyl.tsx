@@ -7,6 +7,7 @@ mutation Mutation($input: CreateVinylInput!) {
     createdAt
     updatedAt
     title
+    artiste
     subtitle
     description
     image

@@ -8,6 +8,7 @@ const AddVinyl = () => {
 
     const [formState, setFormState] = useState({
         title: "",
+        artiste: "",
         subtitle: "",
         description: "",
         image: "",
@@ -27,6 +28,7 @@ const AddVinyl = () => {
         variables: {
             input: {
                 title: formState.title,
+                artiste: formState.artiste,
                 subtitle: formState.subtitle,
                 description: formState.description,
                 image: formState.image,
@@ -66,6 +68,16 @@ const AddVinyl = () => {
                         type="textaera"
                         value={formState.title}
                         onChange={(e) => setFormState({ ...formState, title: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+                        Artist
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="artist"
+                        type="textaera"
+                        value={formState.artiste}
+                        onChange={(e) => setFormState({ ...formState, artiste: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subtitle">
                         Subtitle
