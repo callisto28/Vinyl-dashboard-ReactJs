@@ -61,11 +61,12 @@ const AddVinyl = () => {
                 })}
             >
                 <div className="mb-4">
+
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
                         Title
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="title"
                         type="textaera"
                         value={formState.title}
@@ -76,7 +77,7 @@ const AddVinyl = () => {
                         Artist
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="artist"
                         type="textaera"
                         value={formState.artiste}
@@ -86,7 +87,7 @@ const AddVinyl = () => {
                         Subtitle
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="subtitle"
                         type="textaera"
                         value={formState.subtitle}
@@ -96,7 +97,7 @@ const AddVinyl = () => {
                         Description
                     </label>
                     <textarea
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="description"
 
                         value={formState.description}
@@ -106,7 +107,7 @@ const AddVinyl = () => {
                         Image
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="image"
                         type="url"
                         value={formState.image}
@@ -116,27 +117,27 @@ const AddVinyl = () => {
                         Image2
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="image"
                         type="url"
                         value={formState.imageB}
                         onChange={(e) => setFormState({ ...formState, imageB: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
-                        Url vendeur
+                        Url spotify
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="url"
                         type="url"
                         value={formState.spotify_url}
                         onChange={(e) => setFormState({ ...formState, spotify_url: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
-                        Url spotify
+                        Url Vendeur
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="url"
                         type="url"
                         value={formState.referral_url}
@@ -147,7 +148,7 @@ const AddVinyl = () => {
                             PriceEur €
                         </label>
                         <input
-                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="priceEur"
                             type="number"
 
@@ -158,7 +159,7 @@ const AddVinyl = () => {
                             PriceUSD $
                         </label>
                         <input
-                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="priceUSD"
                             type="number"
 
@@ -170,7 +171,7 @@ const AddVinyl = () => {
                         label
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="label"
                         type="text"
                         value={formState.label}
@@ -180,7 +181,7 @@ const AddVinyl = () => {
                         Genre
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="genre"
                         type="text"
                         value={formState.genre}
@@ -190,7 +191,7 @@ const AddVinyl = () => {
                         Seller
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="seller"
                         type="text"
                         value={formState.seller}
@@ -201,7 +202,7 @@ const AddVinyl = () => {
                         Author
                     </label>
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="author"
                         type="text"
                         value={formState.author}
@@ -209,7 +210,7 @@ const AddVinyl = () => {
                     />
                     <label htmlFor="accept"> Visible </label>
                     <input
-                        className="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="focus:border-2 focus:bg-slate-100 shadow border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="visible"
                         type="checkbox"
                         checked={(formState.featured) ? true : false}
