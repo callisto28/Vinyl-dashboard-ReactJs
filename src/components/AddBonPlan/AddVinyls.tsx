@@ -148,23 +148,30 @@ const AddVinyl = () => {
                             PriceEur €
                         </label>
                         <input
-                            className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="priceEur"
                             type="number"
-
+                            placeholder="0.00"
+                            min="00" 
+                            max="6000000"                            
+                            step=".01"
                             value={formState.priceEur}
-                            onChange={(e) => setFormState({ ...formState, priceEur: parseInt(e.target.value) })}
+                            onChange={(e) => setFormState({ ...formState, priceEur:parseFloat(e.target.value) })}
                         />
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
                             PriceUSD $
                         </label>
                         <input
-                            className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="priceUSD"
                             type="number"
+                            placeholder="0.00"
+                            min="00" 
+                            max="6000000"                            
+                            step=".01"
 
                             value={formState.priceUSD}
-                            onChange={(e) => setFormState({ ...formState, priceUSD: parseInt(e.target.value) })}
+                            onChange={(e) => setFormState({ ...formState, priceUSD: parseFloat(e.target.value) })}
                         />
                     </div>
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
