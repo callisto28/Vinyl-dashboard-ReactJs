@@ -8,11 +8,13 @@ const AddVinyl = () => {
 
     const [formState, setFormState] = useState({
         title: "",
+        artiste: "",
         subtitle: "",
         description: "",
         image: "",
         imageB: "",
         referral_url: "",
+        spotify_url: "",
         priceEur: 0,
         priceUSD: 0,
         label: "",
@@ -27,11 +29,13 @@ const AddVinyl = () => {
         variables: {
             input: {
                 title: formState.title,
+                artiste: formState.artiste,
                 subtitle: formState.subtitle,
                 description: formState.description,
                 image: formState.image,
                 imageB: formState.imageB,
                 referral_url: formState.referral_url,
+                spotify_url: formState.spotify_url,
                 priceEur: formState.priceEur,
                 priceUSD: formState.priceUSD,
                 label: formState.label,
@@ -67,6 +71,16 @@ const AddVinyl = () => {
                         value={formState.title}
                         onChange={(e) => setFormState({ ...formState, title: e.target.value })}
                     />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+                        Artiste
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="artist"
+                        type="textaera"
+                        value={formState.artiste}
+                        onChange={(e) => setFormState({ ...formState, artiste: e.target.value })}
+                    />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subtitle">
                         Subtitle
                     </label>
@@ -80,10 +94,10 @@ const AddVinyl = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
                         Description
                     </label>
-                    <input
+                    <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="description"
-                        type="textarea"
+
                         value={formState.description}
                         onChange={(e) => setFormState({ ...formState, description: e.target.value })}
                     />
@@ -109,6 +123,16 @@ const AddVinyl = () => {
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
                         Url vendeur
+                    </label>
+                    <input
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="url"
+                        type="url"
+                        value={formState.spotify_url}
+                        onChange={(e) => setFormState({ ...formState, spotify_url: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
+                        Url spotify
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

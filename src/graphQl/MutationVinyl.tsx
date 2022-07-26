@@ -7,11 +7,13 @@ mutation Mutation($input: CreateVinylInput!) {
     createdAt
     updatedAt
     title
+    artiste
     subtitle
     description
     image
     imageB
     referral_url
+    spotify_url
     priceEur
     priceUSD
     label
