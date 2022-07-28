@@ -76,7 +76,7 @@ const AddHifi = () => {
                         value={formState.image}
                         onChange={(e) => setFormState({ ...formState, image: e.target.value })}
                     />
-                    
+
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="url">
                         Url vendeur
                     </label>
@@ -91,12 +91,15 @@ const AddHifi = () => {
                         Price
                     </label>
                     <input
-                        className="shadow appearance-none border border-purple-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="price"
+                        className="shadow appearance-none border hover:border-blue-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="priceEur"
                         type="number"
-                        min="5" max="6000"
+                        placeholder="0.00"
+                        min="00"
+                        max="6000000"
+                        step=".01"
                         value={formState.price}
-                        onChange={(e) => setFormState({ ...formState, price: parseInt(e.target.value) })}
+                        onChange={(e) => setFormState({ ...formState, price: parseFloat(e.target.value) })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
                         Seller

@@ -19,6 +19,7 @@ const AddVinyl = () => {
         priceUSD: 0,
         label: "",
         genre: "",
+        release: "",
         seller: "",
         author: "",
         featured: true,
@@ -39,6 +40,7 @@ const AddVinyl = () => {
                 priceEur: formState.priceEur,
                 priceUSD: formState.priceUSD,
                 label: formState.label,
+                release: formState.release,
                 genre: formState.genre,
                 seller: formState.seller,
                 author: formState.author,
@@ -152,11 +154,11 @@ const AddVinyl = () => {
                             id="priceEur"
                             type="number"
                             placeholder="0.00"
-                            min="00" 
-                            max="6000000"                            
+                            min="00"
+                            max="6000000"
                             step=".01"
                             value={formState.priceEur}
-                            onChange={(e) => setFormState({ ...formState, priceEur:parseFloat(e.target.value) })}
+                            onChange={(e) => setFormState({ ...formState, priceEur: parseFloat(e.target.value) })}
                         />
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
                             PriceUSD $
@@ -166,8 +168,8 @@ const AddVinyl = () => {
                             id="priceUSD"
                             type="number"
                             placeholder="0.00"
-                            min="00" 
-                            max="6000000"                            
+                            min="00"
+                            max="6000000"
                             step=".01"
 
                             value={formState.priceUSD}
@@ -183,6 +185,16 @@ const AddVinyl = () => {
                         type="text"
                         value={formState.label}
                         onChange={(e) => setFormState({ ...formState, label: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
+                        Date de sortie
+                    </label>
+                    <input
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="label"
+                        type="text"
+                        value={formState.release}
+                        onChange={(e) => setFormState({ ...formState, release: e.target.value })}
                     />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
                         Genre
