@@ -19,6 +19,7 @@ mutation Mutation($input: CreateVinylInput!) {
     label
     release
     genre
+    promo
     seller
     author
     featured

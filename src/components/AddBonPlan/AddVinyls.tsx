@@ -19,6 +19,7 @@ const AddVinyl = () => {
         priceUSD: 0,
         label: "",
         genre: "",
+        promo:"",
         release: "",
         seller: "",
         author: "",
@@ -42,6 +43,7 @@ const AddVinyl = () => {
                 label: formState.label,
                 release: formState.release,
                 genre: formState.genre,
+                promo: formState.promo,
                 seller: formState.seller,
                 author: formState.author,
                 featured: formState.featured
@@ -176,6 +178,16 @@ const AddVinyl = () => {
                             onChange={(e) => setFormState({ ...formState, priceUSD: parseFloat(e.target.value) })}
                         />
                     </div>
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="promo">
+                       Promo
+                    </label>
+                    <input
+                        className="focus:border-2 focus:bg-slate-100 shadow appearance-none border border-purple-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="promo"
+                        type="text"
+                        value={formState.promo}
+                        onChange={(e) => setFormState({ ...formState, promo: e.target.value })}
+                    />
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="seller">
                         label
                     </label>

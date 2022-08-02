@@ -12,6 +12,7 @@ mutation Mutation($input: CreateMaterialInput!) {
     referral_url
     price
     seller
+    brand
     author
     featured
     slug

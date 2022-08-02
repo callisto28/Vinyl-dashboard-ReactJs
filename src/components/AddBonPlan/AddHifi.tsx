@@ -13,6 +13,7 @@ const AddHifi = () => {
         referral_url: "",
         price: 0,
         seller: "",
+        brand:"",
         author: "",
         featured: true,
         slug: "hifi"
@@ -27,6 +28,7 @@ const AddHifi = () => {
                 referral_url: formState.referral_url,
                 price: formState.price,
                 seller: formState.seller,
+                brand: formState.brand,
                 author: formState.author,
                 featured: formState.featured
             }
@@ -110,6 +112,16 @@ const AddHifi = () => {
                         type="text"
                         value={formState.seller}
                         onChange={(e) => setFormState({ ...formState, seller: e.target.value })}
+                    />
+                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="brand">
+                        Marque
+                    </label>
+                    <input
+                        className="shadow appearance-none border border-purple-500 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="brand"
+                        type="text"
+                        value={formState.brand}
+                        onChange={(e) => setFormState({ ...formState, brand: e.target.value })}
                     />
 
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="author">
